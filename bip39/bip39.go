@@ -84,3 +84,14 @@ func Encode(input []byte) string {
 
 	return strings.Join(answer, " ")
 }
+
+func WordCount() int {
+	return wordCount
+}
+
+func GetWord(index int) (string, bool) {
+	if index >= wordCount {
+		return "", false
+	}
+	return words[index], true
+}
