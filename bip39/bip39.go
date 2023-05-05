@@ -44,7 +44,7 @@ func loadWords(fpath string) ([]string, map[string]int16) {
 func Decode(input string) []byte {
 	answer := big.NewInt(0)
 	j := big.NewInt(1)
-	scratch := new(big.Int)
+	scratch := &big.Int{}
 
 	for _, word := range strings.Split(input, " ") {
 		word = strings.TrimSpace(word)
