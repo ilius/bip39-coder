@@ -7,9 +7,11 @@ import (
 	"strings"
 )
 
-var wordCount = 2048
-var bigRadix = big.NewInt(int64(wordCount))
-var bigZero = big.NewInt(0)
+var (
+	wordCount = 2048
+	bigRadix  = big.NewInt(int64(wordCount))
+	bigZero   = big.NewInt(0)
+)
 
 var words, indexByWord = loadWords("english.txt")
 
