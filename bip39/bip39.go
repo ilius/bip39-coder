@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"math/big"
 	"strings"
+
+	"github.com/ilius/bip39-coder/bip39/assets"
 )
 
 var (
@@ -22,7 +24,7 @@ func init() {
 }
 
 func loadWords(fpath string) ([]string, map[string]int16) {
-	textB, err := Asset(fpath)
+	textB, err := assets.FS.ReadFile("english.txt")
 	if err != nil {
 		panic(err)
 	}
