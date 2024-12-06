@@ -1,7 +1,7 @@
 package main
 
 import (
-	"io/ioutil"
+	"io"
 	"os"
 	"strings"
 
@@ -9,13 +9,13 @@ import (
 )
 
 func main() {
-	inputBytes, err := ioutil.ReadAll(os.Stdin)
+	inputBytes, err := io.ReadAll(os.Stdin)
 	if err != nil {
 		panic(err)
 	}
 	if len(os.Args) > 1 && os.Args[1] == "-d" {
 		os.Stdout.Write([]byte(bip39.Encode(inputBytes) + "\n"))
 	} else {
-		os.Stdout.Write(bip39.Decode(strings.Replace(strings.TrimSpace(string(inputBytes)), "\n", " ", -1)))
+		os.Stdout.Write(bip39.Decode(strings.ReplaceAll(strings.TrimSpace(string(inputBytes)), "\n", " ")))
 	}
 }
