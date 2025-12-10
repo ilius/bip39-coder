@@ -1,3 +1,9 @@
+# 🚨 REPOSITORY MOVED
+
+This project has migrated to **Codeberg** for better alignment with open-source values.
+
+## 👉 New Location: [codeberg.org/ilius/bip39-coder](https://codeberg.org/ilius/bip39-coder)
+
 # bip39-coder
 
 Command line tool for encoding/decoding BIP39 cryptocurrency seeds to/from binary data (which is much smaller)
